@@ -2,6 +2,7 @@ from bottle import route, run, request, debug, default_app
 from bottle import static_file, get
 from hashlib import sha256
 
+log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), router))
 
 person1 = {'username':'Elif','password':'12345','comment': 'Huge fan of this website :p'}
 person2 = {'username':'Bahadir','password':'6789','comment': 'Love it xx'}
