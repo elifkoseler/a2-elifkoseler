@@ -1,0 +1,38 @@
+body{
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdo99Ix41HNJoyx7AY2EcZxjy5E-P-qUixpMqOjADTQ9NqCMH1');
+  font-family: "Lobster", serif;
+}
+.tolkien-header{
+  color:NavajoWhite;
+  border: double;
+  border-color: DarkGoldenrod;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px black;
+
+}
+
+.about-tolkien{
+  border: double gold;
+  font-size: 20px;
+  text-align: center;
+  color:NavajoWhite;
+  text-shadow: 2px 2px 5px black;
+
+}
+
+#tolkienimg{
+  border: 3px double white;
+}
+
+.tolkien-source{
+  color:gold;
+}
+#made{
+
+  border: 5px sienna dotted;
+  text-align: left;
+  width: 200px;
+  background-color: gold;
+
+}

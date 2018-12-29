@@ -1,1 +1,121 @@
+body{
+  background-color:NavajoWhite;
+  font-family: "Lobster", serif;
 
+
+}
+h1{
+  color: white;
+  border: outset;
+  border-color: gold;
+  padding: 50px;
+  text-align: center;
+  text-shadow: 5px 5px 5px gold;
+  letter-spacing: 4px;
+  background-image: url("https://i.gifer.com/CGfq.gif");
+  font-size: 40px;
+  box-shadow: 5px 5px 5px grey;
+
+}
+
+.options-header{
+  font-size: 20px;
+  color:sienna;
+  text-align: left;
+  text-shadow: 3px 3px 5px gold;
+  background-image: url('https://media2.giphy.com/media/V4uGHRgz0zi6Y/giphy.gif?cid=3640f6095be07f806d4e437855efebbf');
+  padding: 40px;
+  box-shadow: 5px 5px 5px grey;
+
+}
+#fs-header{
+  color: Turquoise;
+
+
+}
+#tw-header{
+  color: Aquamarine;
+
+}
+#kg-header{
+  color: PaleTurquoise;
+
+}
+.about-header{
+  color: Sienna;
+  text-shadow: 3px 3px 5px gold;
+  font-size: 25px;
+
+
+}
+.about{
+    background-color: #F4BE57;
+    width: 1300px;
+    border: 20px solid gold;
+    padding: 25px;
+    margin: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 10px 10px 5px grey;
+}
+#Peter{
+  width:200px;height:150px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+#trilogy{
+  width:550px; height:300px;
+  border-radius: 10%;
+  border: 3px solid black;
+}
+
+#oscar{
+  width:450px; height: 300px;
+  border-radius: 10%;
+  border: 3px solid black;
+}
+.cast-header{
+  color: Sienna;
+  text-shadow: 3px 3px 5px gold;
+  font-size: 25px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px ;
+    float: left;
+    width: 180px;
+    box-shadow: 10px 10px 5px grey;
+}
+div.gallery img {
+    width: 100%;
+    height: 100%;
+    border: 3px circle black ;
+
+}
+
+div.desc {
+    background-color: SandyBrown;
+    color: white;
+    padding: 15px;
+    text-align: center;
+
+}
+table, th, td {
+    border: 1px dotted sienna;
+
+}
+.about-source{
+  color: gold;
+}
+.cast-source{
+  color: gold;
+}
+#made{
+  color:sienna;
+  border: 5px sienna dotted;
+  text-align: left;
+  width: 200px;
+  background-color: gold;
+}

@@ -1,0 +1,92 @@
+body{
+  background-image:url('http://adamrabalais.com/wp-content/uploads/2018/03/LOTR_Fellowship-650x975.png');
+  font-family: "Lobster", serif;
+}
+#hp{
+  text-align: left;
+  color:Turquoise;
+  text-shadow:black;
+  font-size: 25px;
+
+}
+.fheader{
+  color:NavajoWhite;
+  border: double;
+  border-color: DarkGoldenrod;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px white;
+
+}
+
+.info{
+  border: double gold;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px white;
+  text-align: right;
+
+}
+.ink{
+  width: 20px;
+}
+.info-source{
+  color: gold;
+  text-align: left;
+
+}
+#about-header{
+  color: white;
+  text-shadow: 3px 3px 5px gold;
+  text-align: center;
+  font-size: 25px;
+}
+.about{
+  border:double gold;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px white;
+
+  text-align: center;
+
+}
+#frodo-sam{
+  width: 30%;
+  height: 30%;
+  border-radius: 10%;
+  border: 3px solid white;
+}
+#summary-header{
+  color: white;
+  text-shadow: 3px 3px 5px gold;
+  text-align: center;
+  font-size: 25px;
+}
+.summary{
+  border:double gold;
+  font-size: 20px;
+  color:NavajoWhite;
+  text-shadow: 1px 1px 2px BLACK;
+  text-align: center;
+}
+#group{
+  width: 30%;
+  height: 30%;
+  border-radius: 10%;
+  border: 3px solid white;
+}
+#fellowship{
+  width: 33%;
+  height: 33%;
+  border-radius: 10%;
+  border: 3px solid white;
+}
+.summary-source{
+    color: gold;
+    text-align: left;
+}
+#made{
+
+  border: 5px sienna dotted;
+  text-align: left;
+  width: 200px;
+  background-color: gold;
+}
