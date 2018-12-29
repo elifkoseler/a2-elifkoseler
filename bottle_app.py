@@ -2,9 +2,10 @@ from bottle import route, run, request, debug, default_app
 from bottle import static_file, get
 from hashlib import sha256
 
-person1 = {'username':'Elif','password':'12345'}
-person2 = {'username':'Bahadir','password':'6789'}
-person3 = {'username':'Sumeyye','password':'7777'}
+
+person1 = {'username':'Elif','password':'12345','comment': 'Huge fan of this website :p'}
+person2 = {'username':'Bahadir','password':'6789','comment': 'Love it xx'}
+person3 = {'username':'Sumeyye','password':'7777','comment':'Best I have ever seen!!'}
 
 mylist = [person1, person2, person3]
 	
@@ -20,7 +21,7 @@ def images(filename):
 
 def htmlify(title,text):
     mywebpagestring = '''
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -182,7 +183,7 @@ The Return of the King, won all 11 of its Academy Award nominations including Be
   Made by <a href="aboutme.html">Elif Koseler</a>
 </p>
 
-<form id="1" action="./a1-elifkoseler/index.html">
+<form id="1">
 	Username:<br>
   	<input type="text" name="username" required><br>
   	Password:<br>
@@ -203,7 +204,7 @@ The Return of the King, won all 11 of its Academy Award nominations including Be
 	<br>
 	Enter your comment:<br>
 	<input type="text" name="comment" required><br>
-	<input type="checkbox" name="lotr" value="lotr" style=color:gold;> I am fan of LOTR :)<br>
+	<input type="checkbox" name="lotr" value="lotr" style="color:gold;" required> I am fan of LOTR :)<br>
 	
 	<input type="submit" value="Send">
 	</form>
@@ -212,6 +213,8 @@ The Return of the King, won all 11 of its Academy Award nominations including Be
 
 </body>
 <style>
+form{	text-align:right;	
+	}
 body{
   background-color:NavajoWhite;
   font-family: "Lobster", serif;
@@ -335,7 +338,7 @@ table, th, td {
 }
 </style>
  '''+text+'''
-    ''' % (title,text)
+    ''' 
     return mywebpagestring
 
 def create_hash(password):                  
@@ -345,7 +348,7 @@ def create_hash(password):
 @route('/index.html')
 def adder():
 	global mylist
-	html = '''
+	html = '''<h2 style = "color:orange;text-shadow: 3px 2px red;"> Comments </h2>
 '''
         isim = "username"
         sifre = "password"
@@ -356,24 +359,38 @@ def adder():
 		if person["username"] == isim and create_hash(person["password"]) == hashing:
                 	new={'username':isim,'password':hashing,'comment':yorum}
                 	mylist.append(new)
-            
-		elif person["username"] == isim and create_hash(person["password"]) != hashing:
-			html+='''<p style="color:red;">
-					<b>Please TRY AGAIN!</b>
-				</p>'''
+	
+		#if person["username"] == isim and create_hash(person["password"]) != hashing:
+			#html+='''<p style="color:Orange;">
+				#	<b>Please TRY AGAIN!</b>
+				#</p>'''
 	
 		elif person["username"] != isim and create_hash(person["password"]) != hashing:
 			new={'username':isim,'password':hashing,'comment':yorum}
 			mylist.append(new)
+			
 
-    	for who in mylist:
-       		html+='''%s %s ''' %(who["username"],who["comment"])
-
+	for who in mylist:
+		html = html +''' <h4 style="color:brown;
+				text-align:left; 
+				text-decoration: underline;
+				letter-spacing: 3px;
+				text-shadow: 3px 2px gold;">
+				%s
+				</h4> 
+				 <div style = "border: 5px dashed #D2691E;
+				background-color:white;
+  				width: 300px;	padding: 25px;
+  				margin: 25px;
+				color:">
+				%s
+				</div>''' %(who['username'],who['comment'])
 
 	return htmlify("Comment Page",html)
 
 
 route('/', 'GET', index)
+route('/<filename:path>', 'GET', static_file_callback)
 
 # This line makes bottle give nicer error messages
 debug(True)
