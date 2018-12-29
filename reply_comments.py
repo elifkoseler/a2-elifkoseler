@@ -1,8 +1,8 @@
 from hashlib import sha256
 
-def create_hash(password):
-    pw_bytestring = password.encode()
-    return sha256(pw_bytestring).hexdigest()
+def create_hash(password):                  ###########################################################
+    pw_bytestring = password.encode()       # This part is taken from https://bitbucket.org/damienjadeduff/hashing_example/raw/master/hash_password.py
+    return sha256(pw_bytestring).hexdigest() ##########################################################
 
 def true_password(hsh2):
   if(hsh1 == hsh2):
