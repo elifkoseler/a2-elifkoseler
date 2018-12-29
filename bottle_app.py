@@ -390,7 +390,7 @@ def adder():
 
 
 route('/', 'GET', index)
-route('/<filename:path>', 'GET', static_file_callback)
+#route('/<filename:path>', 'GET', static_file_callback)
 
 # This line makes bottle give nicer error messages
 debug(True)
