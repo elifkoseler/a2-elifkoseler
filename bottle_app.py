@@ -1,3 +1,5 @@
+from bottle import route, run, default_app, debug
+from bottle import static_file
 
 #####################################################################
 ### Assignment skeleton
@@ -5,7 +7,7 @@
 ### The landing page for assignment 3 should be at /
 #####################################################################
 
-from bottle import route, run, default_app, debug
+
 
 def htmlify(title,text):
     page = """
@@ -19,13 +21,19 @@ def htmlify(title,text):
             %s
             </body>
         </html>
-
     """ % (title,text)
     return page
 
+#def index():
+#    return htmlify("My lovely website",
+#                   "This is going to be an awesome website, when it is finished.")
+
 def index():
-    return htmlify("My lovely website",
-                   "This is going to be an awesome website, when it is finished.")
+    return static_file('index.html', root='./a1-elifkoseler')
+
+def static_file_callback(filename):
+    return static_file(filename, root='./a1-elifkoseler')
+
 
 route('/', 'GET', index)
 
@@ -42,4 +50,3 @@ app = default_app()
 # The below code is necessary for running this bottle app standalone on your computer.
 if __name__ == "__main__":
   run()
-
