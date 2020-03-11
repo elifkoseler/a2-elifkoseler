@@ -3,7 +3,7 @@ from bottle import static_file, get
 from hashlib import sha256
 
 person1 = {'username':'Elif','password':'12345','comment': 'Huge fan of this website :p'}
-person2 = {'username':'Bahadir','password':'6789','comment': 'Love it xx'}
+person2 = {'username':'Ahmet','password':'6789','comment': 'Love it xx'}
 person3 = {'username':'Sumeyye','password':'7777','comment':'Best I have ever seen!!'}
 
 mylist = [person1, person2, person3]
